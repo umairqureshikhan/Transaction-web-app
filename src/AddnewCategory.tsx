@@ -9,7 +9,7 @@ const AddnewCategory = () => {
 
 
         <label className='mt-5  text-gray-500 p-2'>cash</label>
-              <input type="text" name="email" placeholder="20,000" className='w-[400px] rounded-xl' />
+              <input type="text" name="email" placeholder="20,000" className='w-[400px] rounded-xl input-form' />
             <div className='flex justify-center items-center m-5'>
             <button className="   rounded-md p-2 w-60 ">Create</button>
 

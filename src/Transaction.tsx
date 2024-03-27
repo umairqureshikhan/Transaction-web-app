@@ -68,7 +68,7 @@ const Transaction = () => {
         <CreateTransaction />
       ) : (
         <div>
-          <div className="transaction-hedaer h-[80px] w-[75%] rounded-xl flex justify-evenly items-center fixed left-72 top-28 p-10">
+          <div className="transaction-hedaer h-[80px] w-[75%] rounded-xl flex justify-around items-center fixed left-72 top-28 p-5">
             <h1 className="transaction">
               {showCreateTransaction ? "Create Transaction" : "Transaction"}
             </h1>
@@ -78,7 +78,7 @@ const Transaction = () => {
               placeholder="Search..."
             />
             <CiSearch className="search" />
-            <input type="date" className="w-[120px]" />
+            <input type="date" className="w-[120px] h-10 p-2 rounded-md" />
             <button
               className="create-transaction"
               onClick={handleClick}

@@ -18,6 +18,9 @@ const Login = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     setErrors({ ...errors, [e.target.name]: "" });
   };
+  const navigatesignup =()=>{
+    navigate('signup')
+  }
 
   const validateForm = () => {
     const newErrors: any = {};
@@ -107,11 +110,17 @@ const Login = () => {
             {errors.password && (
               <span className="error">{errors.password}</span>
             )}
+             
             <div className="login-btn">
             <button type="submit" >
               LOG IN
             </button>
 
+            </div>
+            <div className="">
+              <a>
+                Don't have an account <a className="ml-3 cursor-pointer" onClick={navigatesignup}>please signUp</a>{" "}
+              </a>
             </div>
             
           </div>
