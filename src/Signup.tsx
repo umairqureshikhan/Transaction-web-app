@@ -145,7 +145,7 @@ const Signup = () => {
               </span>
             </div>
             <div className="checkbox  ">
-              <input type="checkbox" id="termsCheckbox" />
+              <input type="checkbox" id="termsCheckbox" className=""/>
               <h6>
                 I accept the <span>terms and conditions</span>{" "}
               </h6>
