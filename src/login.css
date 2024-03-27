@@ -51,15 +51,14 @@ label{
   gap: 25px;
   padding-top: 65px;
 }
-input{
+.input-form{
   width: 350px;
   height: 45px;
   font-family: sans-serif;
-  /* border: 1px solid rgb(161, 157, 157); */
   outline: none;
   border-radius: 5px;
   padding-inline: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Apply box shadow */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 
 }
 p{

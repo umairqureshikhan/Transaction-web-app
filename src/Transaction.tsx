@@ -1,18 +1,22 @@
 
 
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import { CiSearch } from "react-icons/ci";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import CreateTransaction from "./CreateTransaction"; // Import your CreateTransaction component
-import CreateWallet from "./CreateWallet";
 
 const Transaction = () => {
   const [showCreateTransaction, setShowCreateTransaction] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
+  // const [errors, setErrors] = useState('');
 
  
+
+  useEffect(() => {
+    getWallet();
+  }, []);
 
   const handleClick = () => {
     setShowCreateTransaction(true);
@@ -20,6 +24,41 @@ const Transaction = () => {
   const handleEdit = () => {
     setShowEditModal(!showEditModal);
   }
+
+
+
+  const getWallet = async () => {
+      try {
+        const requestOptions = {
+          method: "get",
+          headers: { "Content-Type": "application/json",
+          Authorization: ""
+         },
+          // body: JSON.stringify(formData),
+        };
+        const res = await fetch(
+          "https://expense-tracker-task-production.up.railway.app/user/wallet",
+          requestOptions
+        );
+        const data = await res.json();
+        console.log("response == ", res);
+        if(res.status === 200){
+          // navigate('/');
+        }else{
+          // let obj = {
+          //   password: 'Something Went Wrong'
+          // }
+          // setErrors('Something Went Wrong');
+        }
+        return data;
+      } catch (error) {
+        console.error("Error:", error); // Log any errors
+        throw error;
+      }
+  };
+
+
+
 
   return (
     <div >

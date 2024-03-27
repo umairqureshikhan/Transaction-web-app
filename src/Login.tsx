@@ -54,9 +54,9 @@ const Login = () => {
         if(res.status === 200){
           navigate('/transaction');
         }else{
-          let obj = {
-            password: 'Something Went Wrong'
-          }
+          // let obj = {
+          //   password: 'Something Went Wrong'
+          // }
         }
         return data;
       } catch (error) {
@@ -81,7 +81,7 @@ const Login = () => {
         </div>
         <form onSubmit={handleSubmit}>
           <div className="login-inputs">
-            <input
+            <input className="input-form"
               type="text"
               name="email"
               value={email}
@@ -89,7 +89,7 @@ const Login = () => {
               placeholder="email address"
             />
             <div className="relative">
-              <input
+              <input className="input-form"
                 type={showPassword ? "text" : "password"}
                 name="password"
                 value={password}

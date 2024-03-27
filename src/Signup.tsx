@@ -46,11 +46,11 @@ const Signup = () => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     if (validateForm()) {
-      let obj = {
-        username: formData.username,
-        email: formData.email,
-        password: formData.password,
-      };
+      // let obj = {
+      //   username: formData.username,
+      //   email: formData.email,
+      //   password: formData.password,
+      // };
       try {
         const requestOptions = {
           method: "post",
@@ -65,7 +65,7 @@ const Signup = () => {
         const data = await res.json();
         console.log("response == ", res);
         if(res.status === 200){
-          navigate('/transaction');
+          navigate('/');
         }else{
           let obj = {
             password: 'Something Went Wrong'
@@ -100,14 +100,14 @@ const Signup = () => {
           </div>
 
           <div className="signUp-inputs">
-            <input
+            <input className="input-form"
               type="text"
               name="username"
               value={username}
               onChange={handleChange}
               placeholder=" User Name"
             />
-            <input
+            <input className="input-form"
               type="text"
               name="email"
               value={email}
@@ -115,7 +115,7 @@ const Signup = () => {
               placeholder="Email Address"
             />
             <div className="relative">
-              <input
+              <input className="input-form"
                 type={showPassword ? "text" : "password"}
                 name="password"
                 value={password}
@@ -130,7 +130,7 @@ const Signup = () => {
               </span>
             </div>
             <div className="relative">
-              <input
+              <input className="input-form"
                 type={showPassword ? "text" : "password"}
                 name="cPassword"
                 value={cPassword}
