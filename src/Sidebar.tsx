@@ -3,7 +3,6 @@ import { FaTransgenderAlt } from 'react-icons/fa'
 import { IoCardSharp } from 'react-icons/io5'
 import { MdOutlinePayment } from 'react-icons/md'
 import win from './../public/win.png'
-import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 
