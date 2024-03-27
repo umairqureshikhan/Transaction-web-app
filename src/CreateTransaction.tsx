@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import Sidebar from "./Sidebar";
-import Header from "./Header";
+import { useState } from "react";
 import { FormControl,  MenuItem, Select } from "@mui/material";
 
 const CreateTransaction = () => {
